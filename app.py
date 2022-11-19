@@ -34,5 +34,5 @@ def booking():
 @app.route("/thankyou")
 def thankyou():
 	return render_template("thankyou.html")
-
+#change MySQL passwords
 app.run(port=3000, debug=True)
