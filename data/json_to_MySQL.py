@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import mysql.connector
 
 load_dotenv()
-MySQL_password=os.getenv('MySQL_password')
+MySQL_password=os.getenv('MySQL_password') #密碼更新
 mydb = mysql.connector.connect(
     host = 'localhost', 
     user = 'root', 

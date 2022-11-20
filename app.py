@@ -21,7 +21,6 @@ app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {"pool_pre_ping":True}
 # db = SQLAlchemy()
 db.init_app(app)
 
-# Pagessql = f'select * from attractions limit 12 offset {skip_row}'
 @app.route("/")
 def index():
 	return render_template("index.html")
