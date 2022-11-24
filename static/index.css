@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 900;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
+  }
+body{
+    font-family: 'Noto Sans TC';
+    /*body預設會有留邊 */
+    margin: 0; 
+    padding: 0; 
+}
+
+header{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-image: url("images/welcome_image.png");
+    background-repeat: no-repeat;
+    height: 320px;
+    /* background-attachment: fixed; */
+    /* background-position: center; */
+    /* background-size: cover; */
+}
+
+.slogan_area{
+    width: 1180px;
+    height: 149px; 
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.slogan_area h1{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 24px;
+    width: 1180px;
+    height: 41px;
+    left: 0px;
+    top: 0px;
+    color: #F8F8F8;
+    text-shadow: 0px 0px 30px #AABBCC;
+    margin:0;
+}
+
+.slogan_area .sub-slogan{
+    width: 1180px;
+    height: 22px;
+    left: 0px;
+    top: 56px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    color: #F8F8F8;
+}
+
+.slogan_area form{
+   display: flex;
+   
+}
+
+.slogan_area form input{
+    background: #FFFFFF;
+    height: 46px;
+    width: 400px;
+    border: 0px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 5px 1px rgb(0 0 0 / 10%);
+}
+
+.slogan_area form button{
+    width: 60px;
+    height: 46px;
+    border: 0;
+    background: #448899;
+    background-image: url("images/icon_search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 5px 5px 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+main .attractions{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+}
+
+main .attractions .attraction{
+    padding: 15px;
+    width: 270px;
+}
+
+.attraction_img{
+    display: flex;
+    align-items: flex-end;
+    width: 270px;
+    height: 197px;
+    /* margin:0; */
+    background-color: red;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 0;
+    background-size: cover;
+    /* background-image: url("https://www.travel.taipei/d_upload_ttn/sceneadmin/image/A0/B0/C0/D14/E810/F21/48d66fbd-1ba3-4efd-837a-3767db5f52e0.jpg"); */
+}
+
+.attraction_name{
+    width: 250px;
+    height: 20px;
+    padding: 10px;
+    background: #000000;
+    opacity: 0.6;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.attraction .info{
+    width: 270px;
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 0;
+}
+
+.attraction .info .mrt{
+    padding: 10px 0px 10px 10px;
+    width: 125px;
+    height: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    color: #757575;
+}
+
+.attraction .info .category{
+    padding: 10px 10px 10px 0px;
+    width: 125px;
+    height: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #757575;
+}
