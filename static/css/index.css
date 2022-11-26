@@ -15,14 +15,12 @@ body{
 
 header{
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content:center;
-    background-image: url("images/welcome_image.png");
-    background-repeat: no-repeat;
+    background-image: url("/static/images/welcome_image.png");
+    background-size: Cover ;
+    margin-bottom: 30px;
     height: 320px;
-    /* background-attachment: fixed; */
-    /* background-position: center; */
-    /* background-size: cover; */
 }
 
 .slogan_area{
@@ -35,21 +33,21 @@ header{
     gap: 10px;
 }
 
-.slogan_area h1{
+.slogan_area > .slogan{
     font-weight: 700;
-    font-size: 28px;
+    /* font-size: 28px; */
     line-height: 24px;
-    width: 1180px;
     height: 41px;
     left: 0px;
     top: 0px;
     color: #F8F8F8;
     text-shadow: 0px 0px 30px #AABBCC;
     margin:0;
+    align-items: center;
+    display: flex;
 }
 
 .slogan_area .sub-slogan{
-    width: 1180px;
     height: 22px;
     left: 0px;
     top: 56px;
@@ -62,29 +60,63 @@ header{
     color: #F8F8F8;
 }
 
-.slogan_area form{
-   display: flex;
-   
+.slogan_area > form{
+    display: flex;
+    height: 46px;
 }
 
-.slogan_area form input{
+.slogan_area > form > input{
     background: #FFFFFF;
-    height: 46px;
+    /* height: 46px; */
     width: 400px;
     border: 0px;
     border-radius: 5px 0 0 5px;
     box-shadow: 0 0 5px 1px rgb(0 0 0 / 10%);
 }
 
-.slogan_area form button{
+.slogan_area > form > button{
     width: 60px;
-    height: 46px;
+    /* height: 46px; */
     border: 0;
     background: #448899;
-    background-image: url("images/icon_search.png");
+    background-image: url("/static/images/icon_search.png");
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 0 5px 5px 0;
+}
+
+.category_block{
+    position: absolute;
+    display: none;
+    width: 400px;
+    top: 278px;
+}
+
+.category_list{
+    z-index: 998;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #ffffff;
+    padding: 5px;
+    border: 0.5px #ffffff solid;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 20px #AABBCC;
+}
+
+.category_name{
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    padding: 10px 15px;
+    /* width: 33.3%; */
+    display: flex;
+    justify-content: center;
+}
+
+.category_name:hover {
+    border-radius: 5px;
+    background-color: #E8E8E8;
 }
 
 main{
@@ -92,14 +124,14 @@ main{
     justify-content: center;
 }
 
-main .attractions{
+main > .attractions{
     width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-wrap: wrap;
 }
 
-main .attractions .attraction{
+main > .attractions > .attraction{
     padding: 15px;
     width: 270px;
 }
@@ -107,7 +139,7 @@ main .attractions .attraction{
 .attraction_img{
     display: flex;
     align-items: flex-end;
-    width: 270px;
+    /* width: 270px; */
     height: 197px;
     /* margin:0; */
     background-color: red;
@@ -115,11 +147,12 @@ main .attractions .attraction{
     border-radius: 5px 5px 0px 0px;
     border-bottom: 0;
     background-size: cover;
+    background-position: center;
     /* background-image: url("https://www.travel.taipei/d_upload_ttn/sceneadmin/image/A0/B0/C0/D14/E810/F21/48d66fbd-1ba3-4efd-837a-3767db5f52e0.jpg"); */
 }
 
 .attraction_name{
-    width: 250px;
+    width: 100%;
     height: 20px;
     padding: 10px;
     background: #000000;
@@ -129,8 +162,8 @@ main .attractions .attraction{
     align-items: center;
 }
 
-.attraction .info{
-    width: 270px;
+.attraction > .info{
+    /* width: 270px; */
     display: flex;
     background: #FFFFFF;
     border: 1px solid #E8E8E8;
@@ -138,9 +171,9 @@ main .attractions .attraction{
     border-top: 0;
 }
 
-.attraction .info .mrt{
+.attraction > .info > .mrt{
     padding: 10px 0px 10px 10px;
-    width: 125px;
+    width: 50%;
     height: 25px;
     font-weight: 500;
     font-size: 16px;
@@ -150,9 +183,9 @@ main .attractions .attraction{
     color: #757575;
 }
 
-.attraction .info .category{
+.attraction > .info > .category{
     padding: 10px 10px 10px 0px;
-    width: 125px;
+    width: 50%;
     height: 25px;
     font-weight: 500;
     font-size: 16px;
@@ -161,4 +194,31 @@ main .attractions .attraction{
     justify-content: right;
     align-items: center;
     color: #757575;
+}
+
+@media (max-width:1200px) {
+    main > .attractions{
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .slogan_area{
+        width: 90%;
+    } 
+
+    main > .attractions > .attraction{
+        width: auto;
+        margin:1%;
+    } 
+}
+
+@media (max-width: 600px) {
+    main > .attractions{
+        grid-template-columns: 1fr;
+    }
+
+    .category_block{
+        width: 322px;
+    }
+
 }
