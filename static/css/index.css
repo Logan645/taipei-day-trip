@@ -72,6 +72,7 @@ header{
     border: 0px;
     border-radius: 5px 0 0 5px;
     box-shadow: 0 0 5px 1px rgb(0 0 0 / 10%);
+    padding: 15px;
 }
 
 .slogan_area > form > button{

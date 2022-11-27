@@ -13,7 +13,7 @@ nav{
     align-items: center;
     position: sticky;
     /* 把畫面從 */
-    z-index: top; 
+    z-index: 999; 
     top: 0px;
     background-color: #FFFFFF;
     height: 54px;
