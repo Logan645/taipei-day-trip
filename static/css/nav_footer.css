@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 900;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
+  }
+
+nav{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: sticky;
+    /* 把畫面從 */
+    z-index: 999; 
+    top: 0px;
+    background-color: #FFFFFF;
+    height: 54px;
+}
+
+nav > .nav{
+    width: 1200px;
+    display: flex;
+}
+
+.nav .title{
+    width: 150px;
+    height: 34px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    color: #448899;
+    flex: none
+}
+
+nav .nav_btn{
+    display:flex; 
+    flex: auto; 
+    /* 在 flex items 尺寸決定後，剩餘空間會被平分給 flex: auto 的 flex items。 */
+    justify-content:flex-end;
+    /* padding-right: 10px; */
+    /* margin-right: 10px; */
+}
+
+.schedule_btn{
+    display: flex;
+    align-items: center;
+    width: 64px;
+    height: 14px;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 13px;
+    color: #666666;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.signin_up_btn{
+    display: flex;
+    align-items: center;
+    width: 71px;
+    height: 14px;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 13px;
+    color: #666666;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+footer{
+    font-family: 'Noto Sans TC';
+    background: #757575;
+    width: 100%;
+    display: flex;
+    height: 104px;
+    align-items:center;
+    justify-content:center;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+@media (max-width:1200px) {
+    nav > .nav{
+        width: 90%;
+    }
+}
+
+@media (max-width:600px){
+    .signin_up_btn{
+        padding-right: 0;
+    }
+}

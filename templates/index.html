@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav_footer.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/nav_footer.css') }}">
+    <title>台北一日遊</title>
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <a class="title">台北一日遊</a> 
+            <div class="nav_btn">
+                <div class="schedule_btn">預定行程</div>
+                <div class="signin_up_btn">登入/註冊</div>
+            </div>
+        </div>        
+    </nav>
+    <header>
+        <div class="slogan_area">
+            <h1 class="slogan">輕鬆享受台北一日遊</h1>
+            <div class="sub-slogan">探索每個角落，體驗城市的深度旅遊行程</div>
+            <form>
+                <input class="inputKw" type="text" name="keyword" placeholder="輸入景點名稱查詢" list="datalist">
+                <button type="submit" onclick="fetchSearch(event)"></button>
+            </form>
+            <div class="category_block">
+                <div class="category_list" id="category_list"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="attractions">
+            <!-- <div class="attraction">
+                <div class="attraction_img">
+                    <div class="attraction_name">景點名稱</div>    
+                </div>
+                <div class="info">
+                    <div class="mrt">捷運站</div>
+                    <div class="category">分類名稱</div>
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <footer>COPYRIGHT © 2021 台北一日遊</footer>
+    <!-- 要放在這裡程式才讀得到，因為是順著讀下來的 -->
+    <!-- <script src="/static/js/index.js"></script> -->
+    <script src="{{ url_for('static', filename='/js/index.js') }}"></script>
+</body>
+</html>
