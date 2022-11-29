@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 900;
-    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'),
-         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'),
-         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
-  }
-body{
-    font-family: 'Noto Sans TC';
-    /*body預設會有留邊 */
-    margin: 0; 
-    padding: 0; 
-}
-
 header{
     display: flex;
     align-items: center;

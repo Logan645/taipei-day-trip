@@ -7,6 +7,13 @@
          url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
   }
 
+body{
+    font-family: 'Noto Sans TC';
+    /*body預設會有留邊 */
+    margin: 0; 
+    padding: 0; 
+}
+
 nav{
     display: flex;
     justify-content:center;

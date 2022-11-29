@@ -1,0 +1,221 @@
+.separator_nav{
+    width: auto;
+    height: 0px;
+    border: 1px solid #E8E8E8;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 1200px;
+    /* height: 800px; */
+}
+
+.section{
+    height: 400px;
+    display: flex;
+    margin: 40px 0px 40px 0px;
+}
+
+.attraction_img{
+    width: 540px;
+    height: 400px;
+    background-image: url('https://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000848.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0px 15px 0px 15px;
+}
+
+.profile{
+    width: 600px;
+    /* height: 400px; */
+    margin: 0px 15px 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.name{
+    height: 33px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    flex: none;
+    align-items: center;
+    color: #666666;
+}
+
+.cat_mrt{
+    flex: none;
+    width: 100%;
+    height: 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.booking_form{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
+    background: #E8E8E8;
+    border-radius: 5px;
+}
+
+.booking_form > span:nth-child(1){
+    width: 100%;
+    height: 22px;
+    flex: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    /* align-items: center; */
+    padding: 15px 20px 0px 20px;
+}
+
+.booking_form > p:nth-child(2){
+    width: 100%;
+    height: 22px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    /* align-items: center; */
+    color: #666666;
+    padding: 15px 20px 0px 20px;
+}
+
+.date{
+    width: 100%;
+    height: 35px;
+    padding: 15px 20px 0px 20px;
+}
+
+.time{
+    width: 100%;
+    height: 22px;
+    display: flex;
+    padding: 15px 20px 0px 20px;
+}
+
+.price{
+    width: 100%;
+    height: 22px;
+    padding: 15px 20px 0px 20px;
+}
+
+.booking_form button{
+    /* display: flex; */
+    flex-direction: row;
+    align-items: flex-start;
+    background: #448899;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 160px;
+    height: 36px;
+    left: 20px;
+    top: 225px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;    
+    color: #FFFFFF;
+    margin: 15px 20px 0px 20px;
+}
+
+.separator_main{
+    width: 100%;
+    height: 0px;
+    border: 1px solid #E8E8E8;
+}
+
+.information{
+    color: #666666;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.description{
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.address{
+    padding: 10px;
+}
+
+.address > span{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.transport{
+    padding: 10px;
+}
+
+.transport > span{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:1200px){
+    .content{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .attraction_img{
+        width: 100%;
+    }
+
+    .section{
+        flex-wrap: wrap;
+        padding-bottom: 350px;
+
+    }
+
+    .booking_form{
+        width: 100%;
+    }
+
+    .profile{
+        width: 100%;
+    }
+    
+    .information{
+        width: 100%;
+        flex: none;
+    }
+
+    
+}
+
+@media(max-width:600px){
+    
+}
