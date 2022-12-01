@@ -5,6 +5,7 @@ function add_attraction(id, image, name, mrtName, categoryName){
     let attraction = document.createElement('div');
     attraction.className = 'attraction';
     attraction.id = 'attraction'+id;
+    attraction.onclick = function(){location.href=`/attraction/${id}`};
     attractions.appendChild(attraction);
     let attraction_img = document.createElement('div');
     attraction_img.className = 'attraction_img';
@@ -30,6 +31,7 @@ function add_attraction(id, image, name, mrtName, categoryName){
     category.id = 'category'+id;
     category.textContent = categoryName; 
     document.querySelector('#info'+id).appendChild(category);
+
 }
 
 // function fetchAPI(apiURL){

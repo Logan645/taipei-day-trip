@@ -31,7 +31,7 @@ main {
 
 .profile{
     width: 600px;
-    /* height: 400px; */
+    height: 400px;
     margin: 0px 15px 0px 15px;
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +70,8 @@ main {
     flex-wrap: wrap;
     background: #E8E8E8;
     border-radius: 5px;
+    padding: 15px 20px 15px 20px;
+    color: #666666;
 }
 
 .booking_form > span:nth-child(1){
@@ -81,44 +83,61 @@ main {
     font-size: 16px;
     line-height: 13px;
     display: flex;
-    /* align-items: center; */
-    padding: 15px 20px 0px 20px;
+    align-items: center;
 }
 
 .booking_form > p:nth-child(2){
     width: 100%;
-    height: 22px;
+    height: 24px;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 13px;
     display: flex;
-    /* align-items: center; */
     color: #666666;
-    padding: 15px 20px 0px 20px;
+    align-items: center;
 }
 
 .date{
     width: 100%;
     height: 35px;
-    padding: 15px 20px 0px 20px;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.date > label{
+    font-weight: bolder;
 }
 
 .time{
     width: 100%;
     height: 22px;
     display: flex;
-    padding: 15px 20px 0px 20px;
+    font-size: 16px;
+    line-height: 13px;
+    align-items: center;
+}
+
+.time > span:nth-child(1){
+    font-weight: bolder;
 }
 
 .price{
     width: 100%;
     height: 22px;
-    padding: 15px 20px 0px 20px;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.price > :nth-child(1){
+    font-weight: bolder;
 }
 
 .booking_form button{
-    /* display: flex; */
     flex-direction: row;
     align-items: flex-start;
     background: #448899;
@@ -133,10 +152,9 @@ main {
     font-size: 19px;
     line-height: 16px;
     display: flex;
-    align-items: center;
+    align-content: center;
     text-align: center;    
     color: #FFFFFF;
-    margin: 15px 20px 0px 20px;
 }
 
 .separator_main{
@@ -196,7 +214,7 @@ main {
 
     .section{
         flex-wrap: wrap;
-        padding-bottom: 350px;
+        padding-bottom: 380px;
 
     }
 
@@ -217,5 +235,13 @@ main {
 }
 
 @media(max-width:600px){
-    
+    .content{
+        width: 100%;
+    }
+
+    .attraction_img{
+        height: 350px;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
 }

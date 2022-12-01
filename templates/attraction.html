@@ -7,7 +7,8 @@
     <title>台北一日遊</title>
     <link rel="stylesheet" type="text/css" href="/static/css/nav_footer.css">
     <link rel="stylesheet" type="text/css" href="/static/css/attraction.css">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/nav_footer.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/nav_footer.css') }}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/attraction.css') }}"> -->
 </head>
 <body>
     <nav>
@@ -29,7 +30,7 @@
                 <div class="profile">
                     <div class="name">新北投溫泉區</div>
                     <div class="cat_mrt">
-                        <span class="catrgory">養生溫泉</span>
+                        <span class="category">養生溫泉</span>
                         <span>at</span>
                         <span class="mrt">新北投</span>
                     </div>
@@ -41,14 +42,14 @@
                             <input type="date" id="date" name="date" required>
                         </div>
                         <div class="time">
-                            選擇時間：
+                            <span>選擇時間：</span>
                             <input type="radio" name="morning" id="morning">
                             <label for="morning">上半天</label>
                             <input type="radio" name="afternoon" id="afternoon">
                             <label for="afternoon">下半天</label>
                         </div>
                         <div class="price">
-                            導覽費用：
+                            導覽費用：<span id="price"></span>元
                         </div>
                         <button type="submit">開始預約行程</button>
                     </form>
@@ -72,4 +73,6 @@
     </main>
     <footer>COPYRIGHT © 2021 台北一日遊</footer>
 </body>
+<script src="/static/js/attraction.js"></script>
+<!-- <script src="{{ url_for('static', filename='/js/attraction.js') }}"></script> -->
 </html>
