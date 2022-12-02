@@ -43,7 +43,7 @@ async function fetchAttractionApi(){
         }else{
             span.className = 'slider_index_icon'
         }
-        span.innerText = i + 1;
+        // span.innerText = i + 1;
         slider_index.appendChild(span)
     }    
 }

@@ -69,22 +69,36 @@ img{
     text-align: center;
     position: absolute;
     bottom: 0;
-    background-color: rgb(0,0,0,.5);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .slider_index span{ 
-    margin: 0px 10px;
+    margin: 0px 6px;
+    opacity: 0.75;
+    border-radius:50%
 }
 
 .current_slider_index_icon{
-    color: red;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .slider_index_icon{
     color: white;
+    width: 12px;
+    height: 12px;
+    background: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .profile{
