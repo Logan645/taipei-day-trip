@@ -1,11 +1,12 @@
-@font-face {
+/* @font-face {
     font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 900;
     src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'),
          url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'),
          url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
-  }
+  } */
+
+  @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 
 body{
     font-family: 'Noto Sans TC';

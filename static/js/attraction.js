@@ -1,11 +1,11 @@
 const price = document.querySelector('.price > #price')
 const morning = document.querySelector('input[id = morning]')
 morning.addEventListener('click',()=>{
-    price.innerText = 2000
+    price.innerText = '2000元'
 })
 const afternoon = document.querySelector('input[id = afternoon]')
 afternoon.addEventListener('click',()=>{
-    price.innerText = 2500
+    price.innerText = '2500元'
 })
 
 
