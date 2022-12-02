@@ -22,7 +22,6 @@ main {
 .attraction_img{
     width: 50%;
     height: 400px;
-    background-color: aqua;
     position: relative;
     overflow: hidden;
     margin: 0px 15px; 
