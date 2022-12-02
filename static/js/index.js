@@ -31,7 +31,6 @@ function add_attraction(id, image, name, mrtName, categoryName){
     category.id = 'category'+id;
     category.textContent = categoryName; 
     document.querySelector('#info'+id).appendChild(category);
-
 }
 
 // function fetchAPI(apiURL){
