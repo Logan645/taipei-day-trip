@@ -5,6 +5,7 @@ function add_attraction(id, image, name, mrtName, categoryName){
     let attraction = document.createElement('div');
     attraction.className = 'attraction';
     attraction.id = 'attraction'+id;
+    attraction.onclick = function(){location.href=`/attraction/${id}`};
     attractions.appendChild(attraction);
     let attraction_img = document.createElement('div');
     attraction_img.className = 'attraction_img';
