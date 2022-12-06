@@ -79,7 +79,7 @@ header{
 }
 
 .category_list{
-    z-index: 998;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #ffffff;

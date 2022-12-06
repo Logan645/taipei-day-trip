@@ -50,23 +50,6 @@ async function fetchAttractionApi(){
 
 fetchAttractionApi()
 
-// window.onload = function(){
-//     const slider = document.querySelector('.slider')
-//     const allItems = slider.children;
-//     // console.log(allItems);
-//     const slider_index = document.querySelector('#slider_index');
-//     for(let i=0; i<allItems.length; i++){
-//         let span = document.createElement('span')
-//         if(i===0){
-//             span.className = 'current_slider_index_icon'
-//         }else{
-//             span.className = 'slider_index_icon'
-//         }
-//         span.innerText = i + 1;
-//         slider_index.appendChild(span)
-//     }    
-// }
-
 function refresh(){
     const attraction_img = document.querySelector('.attraction_img')
     let width = getComputedStyle(attraction_img).width
