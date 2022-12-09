@@ -23,9 +23,9 @@
     <div class="signInSignUp">
         <div class="signIn">
             <div class="docoratorBar"></div>
-            <form action="" method="put">
+            <form id="signIn" method="put">
                 <div class="sign_title">
-                    登入會員帳號<img src="static/images/icon_close.png" alt="close" class="close_sign">
+                    登入會員帳號<img src="/static/images/icon_close.png" alt="close" class="close_sign">
                 </div>
                 <div class="form_content">
                     <input type="email" placeholder="輸入電子信箱" name="email" required><br>
@@ -34,15 +34,15 @@
                 </div>  
             </form>
             <div class="message">
-                <div class="error_message">帳號或密碼錯誤</div>
+                <div id="message"></div>
                 <div>還沒有帳戶？<span id="to_signup">點此註冊</span></div>
             </div>
         </div>
         <div class="signUp">
             <div class="docoratorBar"></div>
-            <form action="" method="post">
+            <form id = "signUp" method="post">
                 <div class="sign_title">
-                    登入會員帳號<img src="static/images/icon_close.png" alt="close" class="close_sign">
+                    註冊會員帳號<img src="/static/images/icon_close.png" alt="close" class="close_sign">
                 </div>
                 <div class="form_content">
                     <input type="text" placeholder="輸入姓名" name="name" required><br>
@@ -52,7 +52,7 @@
                 </div>  
             </form>
             <div class="message">
-                <div class="error_message">電子郵件已被註冊</div>
+                <div id="message"></div>
                 <div>已經有帳戶了？<span id="to_signin">點此登入</span></div>
             </div>
         </div>
@@ -118,6 +118,6 @@
     <footer>COPYRIGHT © 2021 台北一日遊</footer>
 </body>
 <!-- <script src="/static/js/attraction.js"></script> -->
-<script src="{{ url_for('static', filename='/js/sign.js') }}"></script>
-<script src="{{ url_for('static', filename='/js/attraction.js') }}"></script>
+<script src="{{ url_for('static', filename='js/attraction.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sign.js') }}"></script>
 </html>

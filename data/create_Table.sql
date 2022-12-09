@@ -10,3 +10,10 @@ create table attractions(
         longitude FLOAT,
         images JSON
         );
+
+create table member(
+        id bigint not null primary key auto_increment,
+        name varchar(255),
+        email varchar(255) unique,
+        password varchar(255) not null
+);

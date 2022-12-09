@@ -1,9 +1,9 @@
 from flask import Blueprint, json, request, jsonify
-from api.models import Attraction, db
+from api.models import db
 
 attractions = Blueprint("attractions",__name__,)
 
-@attractions.route('/api/attractions')
+@attractions.route('/attractions')
 def api_attractions():
     try:
         page = request.args.get('page')
@@ -55,7 +55,7 @@ def api_attractions():
         "message": "發生錯誤"
         }),500
 
-@attractions.route('/api/attraction/<attractionId>')
+@attractions.route('/attraction/<attractionId>')
 def api_attractionId(attractionId):
     #不確定為何下面這行不能work
     # data = Attraction.query.filter_by(id=attractionId).first()
@@ -83,7 +83,7 @@ def api_attractionId(attractionId):
         "message": "發生錯誤，ID搜尋不到"
         }),500
 
-@attractions.route('/api/categories')
+@attractions.route('/categories')
 def show_categories():
     sql = 'select category from attractions'
     data = db.engine.execute(sql)

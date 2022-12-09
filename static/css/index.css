@@ -125,10 +125,7 @@ main > .attractions > .attraction{
 .attraction_img{
     display: flex;
     align-items: flex-end;
-    /* width: 270px; */
     height: 197px;
-    /* margin:0; */
-    background-color: red;
     border: 1px solid #E8E8E8;
     border-radius: 5px 5px 0px 0px;
     border-bottom: 0;
