@@ -13,7 +13,7 @@
 <body>
     <nav>
         <div class="nav">
-            <a class="title">台北一日遊</a> 
+            <a class="title" href="/">台北一日遊</a>
             <div class="nav_btn">
                 <div class="schedule_btn">預定行程</div>
                 <div class="signin_up_btn">登入/註冊</div>
@@ -24,6 +24,7 @@
         <div class="signIn">
             <div class="docoratorBar"></div>
             <form id="signIn" method="put">
+            <!-- 我原本預想加上method不要讓網址出現querystring，這裡加上沒問題 -->
                 <div class="sign_title">
                     登入會員帳號<img src="/static/images/icon_close.png" alt="close" class="close_sign">
                 </div>
@@ -40,6 +41,8 @@
         </div>
         <div class="signUp">
             <div class="docoratorBar"></div>
+            <!-- <form id = "signUp" method="post"> 
+                為什麼這樣寫會有問題？ 我在js中註冊有加上e.preventDefault() -->
             <form id = "signUp" method="post">
                 <div class="sign_title">
                     註冊會員帳號<img src="/static/images/icon_close.png" alt="close" class="close_sign">

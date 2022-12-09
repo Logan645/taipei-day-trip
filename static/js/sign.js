@@ -47,7 +47,7 @@ closeSign.forEach(btn => btn.addEventListener('click', function(){
 
 //註冊
 async function signUp(e){
-    // e.preventDefault() //避免網頁將資訊變成QueryString
+    e.preventDefault() //避免網頁將資訊變成QueryString
     const data ={
         "name": signUpInputName.value,
         "email": signUpInputEmail.value,

@@ -39,7 +39,8 @@ nav > .nav{
     font-size: 30px;
     line-height: 34px;
     color: #448899;
-    flex: none
+    flex: none;
+    text-decoration: none;
 }
 
 nav .nav_btn{
