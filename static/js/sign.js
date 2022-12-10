@@ -81,7 +81,7 @@ signUpForm.addEventListener('submit', signUp)
 
 //登入
 async function signIn(e){
-    // e.preventDefault() //避免網頁將資訊變成QueryString
+    e.preventDefault() //避免網頁將資訊變成QueryString
     const data = {
         "email": signInInputEmail.value,
         "password": signInInputPassword.value
