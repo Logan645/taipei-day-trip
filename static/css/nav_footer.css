@@ -21,7 +21,7 @@ nav{
     align-items: center;
     position: sticky;
     /* 把畫面從 */
-    z-index: 999; 
+    z-index: 1; 
     top: 0px;
     background-color: #FFFFFF;
     height: 54px;
@@ -39,7 +39,8 @@ nav > .nav{
     font-size: 30px;
     line-height: 34px;
     color: #448899;
-    flex: none
+    flex: none;
+    text-decoration: none;
 }
 
 nav .nav_btn{
@@ -47,8 +48,6 @@ nav .nav_btn{
     flex: auto; 
     /* 在 flex items 尺寸決定後，剩餘空間會被平分給 flex: auto 的 flex items。 */
     justify-content:flex-end;
-    /* padding-right: 10px; */
-    /* margin-right: 10px; */
 }
 
 .schedule_btn{
@@ -65,6 +64,7 @@ nav .nav_btn{
     flex: none;
     order: 0;
     flex-grow: 0;
+    cursor: pointer;
 }
 
 .signin_up_btn{
@@ -81,6 +81,15 @@ nav .nav_btn{
     flex: none;
     order: 0;
     flex-grow: 0;
+    cursor: pointer;
+}
+
+#to_signup{
+    cursor: pointer;
+}
+
+#to_signin{
+    cursor: pointer;
 }
 
 footer{
@@ -94,6 +103,90 @@ footer{
     color: #FFFFFF;
     font-weight: 700;
     font-size: 16px;
+}
+
+.signInSignUp{
+    position: fixed;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 60px #AAAAAA;
+    border-radius: 6px;
+    z-index: 3;
+    width: 340px;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.docoratorBar{
+    width: 100%;
+    background: linear-gradient(270deg, #337788 0%, #66AABB 100%);
+    height: 10px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.sign_title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #666666;
+    margin: 15px 0px;
+}
+
+.close_sign{
+    position: absolute;
+    right: 15px;
+    height: 16px;
+    width: 16px;
+    /* background-image: url('/static/images/icon_close.png'); */
+}
+
+.form_content > input{
+    font-weight: 500;
+    font-size: 16px;
+    align-items: center;
+    color: #757575;
+    padding: 15px;
+    width: 280px;
+    margin: 10px 15px 0px 15px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+.form_content > button{
+    width: 310px;
+    height: 47px ;
+    margin: 10px 15px 0px 15px;
+    background: #448899;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 16px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.signInSignUp .message{
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666666;
+    margin: 10px 15px;
+}
+
+#message{
+    color: red;
+}
+
+.signIn{
+    display: none;
+}
+
+.signUp{
+    display: none;
 }
 
 @media (max-width:1200px) {

@@ -5,21 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台北一日遊</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/nav_footer.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/attraction.css">
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/nav_footer.css') }}"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/attraction.css') }}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/nav_footer.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/attraction.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/nav_footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/attraction.css') }}">
 </head>
 <body>
     <nav>
         <div class="nav">
-            <a class="title">台北一日遊</a> 
+            <a class="title" href="/">台北一日遊</a> 
             <div class="nav_btn">
                 <div class="schedule_btn">預定行程</div>
                 <div class="signin_up_btn">登入/註冊</div>
             </div>
         </div>        
     </nav>
+    <div class="signInSignUp">
+        <div class="signIn">
+            <div class="docoratorBar"></div>
+            <form id="signIn" method="put">
+                <div class="sign_title">
+                    登入會員帳號<img src="/static/images/icon_close.png" alt="close" class="close_sign">
+                </div>
+                <div class="form_content">
+                    <input type="email" placeholder="輸入電子信箱" name="email" required><br>
+                    <input type="password" placeholder="輸入密碼" name="password" required><br>
+                    <button type="submit">登入帳戶</button>
+                </div>  
+            </form>
+            <div class="message">
+                <div id="message"></div>
+                <div>還沒有帳戶？<span id="to_signup">點此註冊</span></div>
+            </div>
+        </div>
+        <div class="signUp">
+            <div class="docoratorBar"></div>
+            <form id = "signUp" method="post">
+                <div class="sign_title">
+                    註冊會員帳號<img src="/static/images/icon_close.png" alt="close" class="close_sign">
+                </div>
+                <div class="form_content">
+                    <input type="text" placeholder="輸入姓名" name="name" required><br>
+                    <input type="email" placeholder="輸入電子信箱" name="email" required><br>
+                    <input type="password" placeholder="輸入密碼" name="password" required><br>
+                    <button type="submit">註冊新帳戶</button>
+                </div>  
+            </form>
+            <div class="message">
+                <div id="message"></div>
+                <div>已經有帳戶了？<span id="to_signin">點此登入</span></div>
+            </div>
+        </div>
+    </div>
     <div class="separator_nav"></div>
     <main>
         <div class="content">
@@ -35,18 +72,18 @@
                     <div class="slider_index" id="slider_index"></div>
                 </div>
                 <div class="profile">
-                    <div class="name">新北投溫泉區</div>
+                    <div class="name"></div>
                     <div class="cat_mrt">
-                        <span class="category">養生溫泉</span>
+                        <span class="category"></span>
                         <span>at</span>
-                        <span class="mrt">新北投</span>
+                        <span class="mrt"></span>
                     </div>
                     <form class="booking_form">
                         <div>訂購導覽行程</div>
                         <div>以此景點為中心的一日行程，帶您探索城市角落的故事</div>
                         <div class="date">
                             <label for="date">選擇日期：</label>
-                            <input type="date" id="date" name="date">
+                            <input type="date" id="date" name="date" required>
                         </div>
                         <div class="time">
                             <span>選擇時間：</span>
@@ -65,21 +102,26 @@
             <div class="separator_main"></div>
             <div class="information">
                 <div class="description" id="description">
-                    北投溫泉從日據時代便有盛名，深受喜愛泡湯的日人自然不會錯過，瀧乃湯、星乃湯、鐵乃湯就是日本人依照溫泉的特性與療效給予的名稱，據說對皮膚病、神經過敏、氣喘、風濕等具有很好的療效，也因此成為了北部最著名的泡湯景點之一。新北投溫泉的泉源為大磺嘴溫泉，泉質屬硫酸鹽泉，PH值約為3~4之間，水質呈黃白色半透明，泉水溫度約為50-90℃，帶有些許的硫磺味 。目前北投的溫泉旅館、飯店、會館大部分集中於中山路、光明路沿線以及北投公園地熱谷附近，總計約有44家，每一家都各有其特色，多樣的溫泉水療以及遊憩設施，提供遊客泡湯養生，而鄰近的景點也是非常值得造訪，例如被列為三級古蹟的三寶吟松閣、星乃湯、瀧乃湯以及北投第一家溫泉旅館「天狗庵」，都有著深遠的歷史背景，而北投公園、北投溫泉博物館、北投文物館、地熱谷等，更是遊客必遊的景點，來到北投除了可以讓溫泉洗滌身心疲憊，也可以順便了解到北投溫泉豐富的人文歷史。
+                    
                 </div>
                 <div class="address">
                     <span>景點位置：</span>
-                    <div id="address">臺北市  北投區中山路、光明路沿線</div>
+                    <div id="address">
+                        
+                    </div>
                 </div>
                 <div class="transport">
                     <span>交通方式：</span>
-                    <div id="transport">新北投站下車，沿中山路直走即可到達公車：216、218、223、230、266、602、小6、小7、小9、、小22、小25、小26至新北投站下車</div>
+                    <div id="transport">
+
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <footer>COPYRIGHT © 2021 台北一日遊</footer>
 </body>
-<script src="/static/js/attraction.js"></script>
-<!-- <script src="{{ url_for('static', filename='/js/attraction.js') }}"></script> -->
+<!-- <script src="/static/js/attraction.js"></script> -->
+<script src="{{ url_for('static', filename='js/attraction.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sign.js') }}"></script>
 </html>

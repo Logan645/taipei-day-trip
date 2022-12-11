@@ -139,3 +139,4 @@ cython_debug/
 
 # 不知何時多的檔案
 .vscode
+test.py

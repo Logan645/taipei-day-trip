@@ -4,22 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/nav_footer.css">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/index.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/nav_footer.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav_footer.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nav_footer.css') }}">
     <title>台北一日遊</title>
 </head>
 <body>
     <nav>
         <div class="nav">
-            <a class="title">台北一日遊</a> 
+            <a class="title" href="/">台北一日遊</a>
             <div class="nav_btn">
                 <div class="schedule_btn">預定行程</div>
                 <div class="signin_up_btn">登入/註冊</div>
             </div>
         </div>        
     </nav>
+    <div class="signInSignUp">
+        <div class="signIn">
+            <div class="docoratorBar"></div>
+            <form id="signIn" method="put">
+            <!-- 我原本預想加上method不要讓網址出現querystring，這裡加上沒問題 -->
+                <div class="sign_title">
+                    登入會員帳號<img src="/static/images/icon_close.png" alt="close" class="close_sign">
+                </div>
+                <div class="form_content">
+                    <input type="email" placeholder="輸入電子信箱" name="email" required><br>
+                    <input type="password" placeholder="輸入密碼" name="password" required><br>
+                    <button type="submit">登入帳戶</button>
+                </div>  
+            </form>
+            <div class="message">
+                <div id="message"></div>
+                <div>還沒有帳戶？<span id="to_signup">點此註冊</span></div>
+            </div>
+        </div>
+        <div class="signUp">
+            <div class="docoratorBar"></div>
+            <!-- <form id = "signUp" method="post"> 
+                為什麼這樣寫會有問題？ 我在js中註冊有加上e.preventDefault() -->
+            <form id = "signUp" method="post">
+                <div class="sign_title">
+                    註冊會員帳號<img src="/static/images/icon_close.png" alt="close" class="close_sign">
+                </div>
+                <div class="form_content">
+                    <input type="text" placeholder="輸入姓名" name="name" required><br>
+                    <input type="email" placeholder="輸入電子信箱" name="email" required><br>
+                    <input type="password" placeholder="輸入密碼" name="password" required><br>
+                    <button type="submit">註冊新帳戶</button>
+                </div>  
+            </form>
+            <div class="message">
+                <div id="message"></div>
+                <div>已經有帳戶了？<span id="to_signin">點此登入</span></div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="slogan_area">
             <h1 class="slogan">輕鬆享受台北一日遊</h1>
@@ -49,6 +89,7 @@
     <footer>COPYRIGHT © 2021 台北一日遊</footer>
     <!-- 要放在這裡程式才讀得到，因為是順著讀下來的 -->
     <!-- <script src="/static/js/index.js"></script> -->
-    <script src="{{ url_for('static', filename='/js/index.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sign.js') }}"></script>
 </body>
 </html>
