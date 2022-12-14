@@ -33,25 +33,6 @@ function add_attraction(id, image, name, mrtName, categoryName){
     document.querySelector('#info'+id).appendChild(category);
 }
 
-// function fetchAPI(apiURL){
-//     fetch(apiURL)
-//     .then(response=>{
-//         return response.json();
-//     })
-//     .then(data=>{
-//         let arr = data['data']
-//         for(let i=0; i<12; i++){
-//             let id = arr[i]['id'];
-//             let image = arr[i]['images'][0];
-//             let name = arr[i]['name'];
-//             let mrt = arr[i]['mrt'];
-//             let category = arr[i]['category']
-//             add_attraction(id, image, name, mrt, category)
-//         }
-//         nextPage = data['nextPage']
-//     })
-// }
-
 let page = 0
 let keyword = ''
 let isFatching = false
