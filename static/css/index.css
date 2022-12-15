@@ -120,6 +120,7 @@ main > .attractions{
 main > .attractions > .attraction{
     padding: 15px;
     width: 270px;
+    text-decoration: none;
 }
 
 .attraction_img{

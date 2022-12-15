@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>訂購導覽行程</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/nav_footer.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/booking.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nav_footer.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/booking.css') }}">
 </head>
@@ -61,21 +63,20 @@
     <div class="separator_nav"></div>
     <main>
         <div class="content">
-            <div class="headline">您好，<span id="userName">使用者名稱</span>，待預定的行程如下：</div>
+            <div class="headline">您好，<span id="userName"></span>，待預定的行程如下：</div>
             <section>
                 <div class="attraction_img"></div>
                 <div class="infor">
                     <div>台北一日遊：<span id="name">景點名稱</span></div>
-                    日期：<span id="date">test</span><br>
-                    時間：<span id="time">test</span><br>
-                    費用：<span id="price">test</span><br>
-                    地點：<span id="spot">test</span><br>
+                    日期：<span id="date"></span><br>
+                    時間：<span id="time"></span><br>
+                    費用：<span id="currency">新台幣<span id="price"></span>元</span><br>
+                    地點：<span id="address"></span><br>
                 </div>
-                <div>
-                    <img src="/static/images/icon_delete.png" alt="delete">
+                <div class="delete_block">
+                    <img src="/static/images/icon_delete.png" alt="delete" id="delete_icon">
                 </div>
-                
-                
+                    
             </section>
             <div class="separator_main"></div>
             <div class="contact_form">
@@ -103,4 +104,5 @@
     <footer>COPYRIGHT © 2021 台北一日遊</footer>
 </body>
 <script src="{{ url_for('static', filename='js/sign.js') }}"></script>
+<script src="{{ url_for('static', filename='js/booking.js') }}"></script>
 </html>

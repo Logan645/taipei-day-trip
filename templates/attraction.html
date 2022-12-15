@@ -78,22 +78,22 @@
                         <span>at</span>
                         <span class="mrt"></span>
                     </div>
-                    <form class="booking_form">
+                    <form class="booking_form" method="post">
                         <div>訂購導覽行程</div>
                         <div>以此景點為中心的一日行程，帶您探索城市角落的故事</div>
                         <div class="date">
                             <label for="date">選擇日期：</label>
-                            <input type="date" id="date" name="date" required>
+                            <input type="date" id="date" name="date"required>
                         </div>
                         <div class="time">
                             <span>選擇時間：</span>
-                            <input type="radio" name="time" id="morning">
+                            <input type="radio" name="time" id="morning" value="morning">
                             <label for="morning">上半天</label>
-                            <input type="radio" name="time" id="afternoon">
+                            <input type="radio" name="time" id="afternoon" value="afternoon">
                             <label for="afternoon">下半天</label>
                         </div>
                         <div class="price">
-                            導覽費用：<span id="price"></span>
+                            導覽費用：<span id="price"></span>元
                         </div>
                         <button type="submit">開始預約行程</button>
                     </form>

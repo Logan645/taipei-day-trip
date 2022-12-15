@@ -16,6 +16,7 @@ signInOutBtn.addEventListener('click', function(){
     if(signInOutBtn.textContent==='登入/註冊'){
         signUpBlock.style.display = 'none';
         signInBlock.style.display = 'block';
+        signInMessage.textContent = ''
     }else{
         logout()
     }
@@ -128,3 +129,17 @@ async function logout(){
         location.reload();
     }    
 }
+
+scheduleBtn = document.querySelector('.schedule_btn')
+scheduleBtn.addEventListener('click',async()=>{
+    response = await fetch('/api/user/auth');
+    data = await response.json();
+    if (data["data"]){
+        signInOutBtn.textContent='登出系統'
+        window.location.href = '/booking'
+    }else{
+        signInBlock.style.display = 'block';
+        signInMessage.textContent = '請先登入'
+        signInOutBtn.textContent='登入/註冊'
+    }
+})

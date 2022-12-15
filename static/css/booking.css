@@ -35,6 +35,8 @@ section{
     height: 200px;
     background-color: aliceblue;
     margin: 0px 8px;
+    background-size: cover;
+    background-position: center;
 }
 
 .infor > div:nth-child(1){
@@ -51,11 +53,11 @@ section{
     color: #666666;
 }
 
-#date, #time, #price, #spot{
+#date, #time, #price, #address, #currency{
     font-weight: 500;
 }
 
-section > div:nth-child(3){
+section > .delete_block{
     display: flex;
     justify-content: flex-end;
     height: 30px;
@@ -84,7 +86,7 @@ section > img{
     color: #666666;
 }
 
-.contact_form_title{
+.contact_form_title, .payment_title{
     font-weight: 700;
     font-size: 19px;
     line-height: 45px;
@@ -93,14 +95,14 @@ section > img{
     color: #666666;
 }
 
-.contact_form > input{
+.contact_form  >input, .payment>input{
     box-sizing: border-box;
-    position: absolute;
     width: 200px;
     height: 38px;
     background: #FFFFFF;
     border: 1px solid #E8E8E8;
     border-radius: 5px;
+    padding: 10px;
 }
 
 .confirm{
@@ -118,6 +120,7 @@ section > img{
     margin-bottom: 20px;
     font-style: normal;
     font-weight: 700;
+    color: #666666;
 }
 
 .confirm > button{
@@ -135,3 +138,14 @@ section > img{
     margin-bottom: 40px;
 }
 
+@media (max-width: 600px) {
+    .content{
+        width: 100%;
+    }
+    section{
+        display: block;
+    }
+    #notice{
+        line-height: 23px;
+    }
+}

@@ -106,7 +106,7 @@ def get_userdata():
 #登出系統
 @user.route('/user/auth', methods=['DELETE'])
 def log_out():
-    response = make_response(jsonify({"ok": True}))
+    response = make_response(jsonify({"ok": True})) #產生一個response物件
     response.set_cookie(key="JWT", value="", expires = 0)
     return response, 200
 

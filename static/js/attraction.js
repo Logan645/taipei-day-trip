@@ -1,11 +1,11 @@
 const price = document.querySelector('.price > #price')
 const morning = document.querySelector('input[id = morning]')
 morning.addEventListener('click',()=>{
-    price.innerText = '2000元'
+    price.innerText = '2000'
 })
 const afternoon = document.querySelector('input[id = afternoon]')
 afternoon.addEventListener('click',()=>{
-    price.innerText = '2500元'
+    price.innerText = '2500'
 })
 
 
@@ -81,3 +81,40 @@ function leftshift(){
     }
     refresh()
 }
+
+//date input的min是明天
+const date = document.querySelector('#date')
+const Today =new Date()
+// 比較特別的是 getMonth() 預設會從零開始，所以我們把他 +1 來修正結果。
+date.min = Today.getFullYear()+ '-' + (Today.getMonth()+1) + '-' +(Today.getDate()+1)
+
+//將行程加入購物車
+async function addToCart(event){
+    event.preventDefault() //避免網頁將資訊變成QueryString
+    const id = document.URL.split('/').slice(-1)[0]
+    //選擇input name=time被勾選的元素
+    const time = document.querySelector('input[name="time"]:checked')
+    const date = document.querySelector('#date')
+    const data ={
+        "attractionId": id,
+        "date": date.value,
+        "time": time.value,
+        "price": price.textContent
+    }
+    // console.log(data);
+    const config ={
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { //headers必須要是小寫
+            "Content-type": "application/json",
+            "Accept": "application/json"
+        }
+    }
+    const res = await fetch('/api/booking', config)
+    const response = await res.json()
+    if(response.ok){
+        window.location.href='/booking'
+    }
+}
+const booking_form = document.querySelector(".booking_form")
+booking_form.addEventListener('submit', addToCart)
