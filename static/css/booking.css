@@ -1,9 +1,10 @@
 main{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-main > .content{
+.headline_block{
     width :1200px;
     display: flex;
     justify-content: center;
@@ -21,6 +22,29 @@ main > .content{
     margin-top: 40px;
     flex: none;
 }
+
+#nullMessage{
+    width: 83.3333%;
+    font-style: normal;
+    color: #666666;
+    height: 16px;
+    margin-top: 40px;
+    flex: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+}
+
+main > .content{
+    width :1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
 
 section{
     display: flex;

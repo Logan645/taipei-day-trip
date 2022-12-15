@@ -116,5 +116,20 @@ async function addToCart(event){
         window.location.href='/booking'
     }
 }
+
+//按鈕被點擊時送出訂單
 const booking_form = document.querySelector(".booking_form")
-booking_form.addEventListener('submit', addToCart)
+booking_form.addEventListener('submit', async(event)=>{
+    event.preventDefault()
+    const response = await fetch('/api/user/auth');
+    const data = await response.json();
+    console.log(data['data']);
+    if(data['data']){
+        await addToCart(event)
+    }else{
+        const signIn = document.querySelector('.signIn')
+        signInBlock.style.display = 'block'
+        const signInMessage = document.querySelector('.signIn #message');
+        signInMessage.textContent = '請先登入'
+    }
+})

@@ -109,6 +109,9 @@ footer{
     color: #FFFFFF;
     font-weight: 700;
     font-size: 16px;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
 }
 
 .signInSignUp{

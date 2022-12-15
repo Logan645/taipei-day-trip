@@ -17,3 +17,14 @@ create table member(
         email varchar(255) unique,
         password varchar(255) not null
 );
+
+create table cart(
+        id bigint not null primary key auto_increment,
+        user_id bigint not null unique,
+        attraction_id bigint not null,
+        date DATE not null,
+        time varchar(100) not null,
+        price bigint not null,
+        FOREIGN KEY (user_ID) REFERENCES member(id),
+        FOREIGN KEY (attraction_id) REFERENCES attractions(id)
+        );

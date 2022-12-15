@@ -110,9 +110,7 @@ signInForm.addEventListener('submit', signIn)
 //確認登錄狀態
 async function checkUserStatus(){
     response = await fetch('/api/user/auth');
-    // console.log(response);
     data = await response.json();
-    // console.log(data["data"]);
     if (data["data"]){
         signInOutBtn.textContent='登出系統'
     }else{
@@ -130,11 +128,13 @@ async function logout(){
     }    
 }
 
+//點擊預定行程
 scheduleBtn = document.querySelector('.schedule_btn')
-scheduleBtn.addEventListener('click',async()=>{
+scheduleBtn.addEventListener('click', async()=>{
     response = await fetch('/api/user/auth');
     data = await response.json();
-    if (data["data"]){
+    // console.log("點擊預定行程="+data[data]);
+    if (data['data']){
         signInOutBtn.textContent='登出系統'
         window.location.href = '/booking'
     }else{
@@ -143,3 +143,17 @@ scheduleBtn.addEventListener('click',async()=>{
         signInOutBtn.textContent='登入/註冊'
     }
 })
+
+window.onload = function (){
+    console.log('視窗內部高度'+window.innerHeight);
+    console.log('body高度' + document.body.offsetHeight);
+    console.log(window.innerHeight-document.body.offsetHeight);
+    if(window.innerHeight-document.body.offsetHeight>0){
+        const footer = document.createElement('div')
+        const height = window.innerHeight-document.body.offsetHeight
+        footer.style = `height: ${height}px; background: #757575`
+        const body = document.querySelector('body')
+        body.appendChild(footer)
+    }
+}
+

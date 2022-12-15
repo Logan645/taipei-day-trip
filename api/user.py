@@ -79,7 +79,7 @@ def signin():
         return jsonify(response),500
 
 #確認使用狀態
-@user.route('/user/auth', methods=['GET'])
+@user.route('/user/auth' ,methods=['GET'])
 def get_userdata():
     cookie = request.cookies.get('JWT')
     try:
@@ -100,8 +100,8 @@ def get_userdata():
             }
         return jsonify(response) ,200
     except:
-        response = {"data": None}
-        return jsonify(response), 200
+        response = {"data": None} 
+        return jsonify(response), 200 #不能用204會出問題
 
 #登出系統
 @user.route('/user/auth', methods=['DELETE'])

@@ -16,23 +16,27 @@ def check_cart():
             id = jwt.decode(cookie, JWT_Key ,algorithms="HS256")['id']
             sql = 'select * from cart where user_id = %s'
             val = (id, )
-            cart_data = list(db.engine.execute(sql, val).fetchone())
-            if cart_data:
+            cart_data = db.engine.execute(sql, val).fetchall()
+            print(cart_data)
+            if cart_data==[]:
+                response = {"data": None}
+                return jsonify(response) ,200
+            else:
                 sql = 'select * from attractions where id = %s'
-                val = (cart_data[2],)
+                val = (cart_data[0][2],)
                 attraction_data = list(db.engine.execute(sql, val).fetchone())
                 # print(type(cart_data[3])) #<class 'datetime.date'>
                 response = {
                     "data": {
                         "attraction": {
-                            "id": cart_data[2],
+                            "id": cart_data[0][2],
                             "name": attraction_data[2],
                             "address": attraction_data[4],
                             "image":  json.loads(attraction_data[-1])[0]
                         },
-                    "date": cart_data[3].strftime("%Y-%b-%d"), #日期格式有問題，要轉換
-                    "time": cart_data[4],
-                    "price": cart_data[5]
+                    "date": cart_data[0][3].strftime("%Y-%b-%d"), #日期格式有問題，要轉換
+                    "time": cart_data[0][4],
+                    "price": cart_data[0][5]
                     }
                 }
                 return jsonify(response) ,200
