@@ -7,8 +7,10 @@ app.config["JSON_AS_ASCII"]=False #把对象序列化为 ASCII-encoded JSON
 #註冊blueprint
 from api.attractions_route import attractions
 from api.user import user
+from api.booking import booking
 app.register_blueprint(attractions, url_prefix="/api")
 app.register_blueprint(user, url_prefix="/api")
+app.register_blueprint(booking, url_prefix="/api")
 
 from dotenv import load_dotenv
 import os

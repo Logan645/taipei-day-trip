@@ -2,10 +2,10 @@ const attractions = document.querySelector('.attractions')
 const search = document.querySelector('header form')
 
 function add_attraction(id, image, name, mrtName, categoryName){
-    let attraction = document.createElement('div');
+    let attraction = document.createElement('a');
     attraction.className = 'attraction';
     attraction.id = 'attraction'+id;
-    attraction.onclick = function(){location.href=`/attraction/${id}`};
+    attraction.href = `/attraction/${id}`;
     attractions.appendChild(attraction);
     let attraction_img = document.createElement('div');
     attraction_img.className = 'attraction_img';
@@ -32,25 +32,6 @@ function add_attraction(id, image, name, mrtName, categoryName){
     category.textContent = categoryName; 
     document.querySelector('#info'+id).appendChild(category);
 }
-
-// function fetchAPI(apiURL){
-//     fetch(apiURL)
-//     .then(response=>{
-//         return response.json();
-//     })
-//     .then(data=>{
-//         let arr = data['data']
-//         for(let i=0; i<12; i++){
-//             let id = arr[i]['id'];
-//             let image = arr[i]['images'][0];
-//             let name = arr[i]['name'];
-//             let mrt = arr[i]['mrt'];
-//             let category = arr[i]['category']
-//             add_attraction(id, image, name, mrt, category)
-//         }
-//         nextPage = data['nextPage']
-//     })
-// }
 
 let page = 0
 let keyword = ''
@@ -144,7 +125,7 @@ const menu = document.querySelector('.category_block');
 inputKw.addEventListener('click', async function (event) {
     await fetchCategoryApi();
     menu.style.display = 'block';
-    event.stopPropagation();
+    event.stopPropagation(); 
     //將所有category抓入
     let category_list = document.querySelectorAll('.category_name');
     for (let i of category_list) {
@@ -160,4 +141,6 @@ document.addEventListener('click',function(){
 })
 window.addEventListener('scroll', debounce(renderNextPage))
 search.addEventListener('submit', fetchSearch)
+// const btn = querySelector('body > header > div > form > button')
+// btn.addEventListener('click', fetchSearch)
 

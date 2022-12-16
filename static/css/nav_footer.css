@@ -92,6 +92,12 @@ nav .nav_btn{
     cursor: pointer;
 }
 
+.separator_nav{
+    width: auto;
+    height: 0px;
+    border: 1px solid #E8E8E8;
+}
+
 footer{
     font-family: 'Noto Sans TC';
     background: #757575;
@@ -103,6 +109,9 @@ footer{
     color: #FFFFFF;
     font-weight: 700;
     font-size: 16px;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
 }
 
 .signInSignUp{
