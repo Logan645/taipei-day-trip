@@ -19,7 +19,7 @@ main{
     line-height: 16px;
     color: #666666;
     height: 16px;
-    margin-top: 40px;
+    margin: 40px 0px;
     flex: none;
 }
 
@@ -27,8 +27,6 @@ main{
     width: 83.3333%;
     font-style: normal;
     color: #666666;
-    height: 16px;
-    margin-top: 40px;
     flex: none;
     font-weight: 500;
     font-size: 16px;
@@ -119,7 +117,7 @@ section > img{
     color: #666666;
 }
 
-.contact_form  >input, .payment>input{
+.contact_form  >input{
     box-sizing: border-box;
     width: 200px;
     height: 38px;
@@ -160,6 +158,21 @@ section > img{
     color: #FFFFFF;
     border: 0px;
     margin-bottom: 40px;
+}
+
+.tpfield {
+    box-sizing: border-box;
+    width: 200px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.pay_form{
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 600px) {

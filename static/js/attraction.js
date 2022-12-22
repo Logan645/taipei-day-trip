@@ -8,7 +8,6 @@ afternoon.addEventListener('click',()=>{
     price.innerText = '2500'
 })
 
-
 async function fetchAttractionApi(){
     const id = document.URL.split('/').slice(-1)
     const apiUrl = '/api/attraction/' + id
@@ -50,6 +49,7 @@ async function fetchAttractionApi(){
 
 fetchAttractionApi()
 
+//圖片左右滑動
 function refresh(){
     const attraction_img = document.querySelector('.attraction_img')
     let width = getComputedStyle(attraction_img).width
@@ -101,7 +101,7 @@ async function addToCart(event){
         "time": time.value,
         "price": price.textContent
     }
-    // console.log(data);
+    console.log(data);
     const config ={
         method: "POST",
         body: JSON.stringify(data),
@@ -123,7 +123,7 @@ booking_form.addEventListener('submit', async(event)=>{
     event.preventDefault()
     const response = await fetch('/api/user/auth');
     const data = await response.json();
-    console.log(data['data']);
+    // console.log(data['data']);
     if(data['data']){
         await addToCart(event)
     }else{
