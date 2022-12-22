@@ -25,6 +25,8 @@ nav{
     top: 0px;
     background-color: #FFFFFF;
     height: 54px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #E8E8E8;
 }
 
 nav > .nav{
@@ -90,12 +92,6 @@ nav .nav_btn{
 
 #to_signin{
     cursor: pointer;
-}
-
-.separator_nav{
-    width: auto;
-    height: 0px;
-    border: 1px solid #E8E8E8;
 }
 
 footer{

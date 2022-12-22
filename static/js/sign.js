@@ -144,16 +144,4 @@ scheduleBtn.addEventListener('click', async()=>{
     }
 })
 
-window.onload = function (){
-    console.log('視窗內部高度'+window.innerHeight);
-    console.log('body高度' + document.body.offsetHeight);
-    console.log(window.innerHeight-document.body.offsetHeight);
-    if(window.innerHeight-document.body.offsetHeight>0){
-        const footer = document.createElement('div')
-        const height = window.innerHeight-document.body.offsetHeight
-        footer.style = `height: ${height}px; background: #757575`
-        const body = document.querySelector('body')
-        body.appendChild(footer)
-    }
-}
 

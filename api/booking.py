@@ -17,7 +17,6 @@ def check_cart():
             sql = 'select * from cart where user_id = %s'
             val = (id, )
             cart_data = db.engine.execute(sql, val).fetchall()
-            print(cart_data)
             if cart_data==[]:
                 response = {"data": None}
                 return jsonify(response) ,200
@@ -30,7 +29,7 @@ def check_cart():
                     "data": {
                         "attraction": {
                             "id": cart_data[0][2],
-                            "name": attraction_data[2],
+                            "name": attraction_data[1],
                             "address": attraction_data[4],
                             "image":  json.loads(attraction_data[-1])[0]
                         },
