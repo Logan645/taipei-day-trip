@@ -60,14 +60,12 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="separator_nav"></div> -->
         <main>
             <div class="headline_block">
                 <div class="headline">您好，<span id="userName"></span>，待預定的行程如下：</div>
                 <div id="nullMessage"></div>
             </div>
             <form class="content">
-                <!-- <div class="headline">您好，<span id="userName"></span>，待預定的行程如下：</div> -->
                 <section>
                     <div class="attraction_img"></div>
                     <div class="infor">
@@ -109,13 +107,13 @@
                 <div class="separator_main"></div>
                 <div class="confirm">
                     <div>總價：新台幣 <span id="total_price"></span></div>
-                    <button type="submit">確認訂購並付款</button>
+                    <button type="submit" id="submitOrder">確認訂購並付款</button>
                 </div>
             </form>    
         </main>
         <footer>COPYRIGHT © 2021 台北一日遊</footer>
         <script src="https://js.tappaysdk.com/sdk/tpdirect/v5.14.0"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
         <script src="{{ url_for('static', filename='js/booking.js') }}"></script>
         <script src="{{ url_for('static', filename='js/sign.js') }}"></script>
     </body>

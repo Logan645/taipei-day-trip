@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nav_footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/thankyou.css') }}">
     <title>感謝頁</title>
 </head>
 <body>
@@ -54,10 +55,16 @@
             </div>
         </div>
     </div>
+    <main>
+        <div>
+            訂單編號：<span id="order_id"></span>，已付款成功<br>
+            謝謝您訂購我們的行程<br>
+            期待活動當日為您服務。<br>
+            活動請保持手機暢通，準時到達，導覽人員將用手機與您聯繫。<br>
+        </div>
+    </main>
     <footer>COPYRIGHT © 2021 台北一日遊</footer>
-    <!-- 要放在這裡程式才讀得到，因為是順著讀下來的 -->
-    <!-- <script src="/static/js/index.js"></script> -->
-    <!-- <script src="{{ url_for('static', filename='js/index.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/sign.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/thankyou.js') }}"></script>
 </body>
 </html>

@@ -1,11 +1,10 @@
 //確認登入狀況
-(async ()=>{
-    const test = 1234
-    const userName = document.querySelector('#userName');
+(async ()=>{    
     const response = await fetch('/api/user/auth');
     const data = await response.json();
     if (data["data"]){
         // console.log(data["data"]);
+        const userName = document.querySelector('#userName');
         userName.textContent = data["data"]["name"]
         await getCartData()
         // 伸縮footer
@@ -141,13 +140,13 @@ TPDirect.card.onUpdate(function (update) {
     /* ============================================================ */
     // update.canGetPrime === true
     //     --> you can call TPDirect.card.getPrime()
-    // const submitButton = document.querySelector('button[type="submit"]')
+    const submitButton = document.querySelector('#submitOrder')
     if (update.canGetPrime) {
-        // submitButton.removeAttribute('disabled')
-        $('button[type="submit"]').removeAttr('disabled')
+        submitButton.removeAttribute('disabled')
+        // $('button[type="submit"]').removeAttr('disabled')
     } else {
-        // submitButton.setAttribute('disabled', true)
-        $('button[type="submit"]').attr('disabled', true)
+        submitButton.setAttribute('disabled', true)
+        // $('button[type="submit"]').attr('disabled', true)
     }
 
 
@@ -156,7 +155,7 @@ TPDirect.card.onUpdate(function (update) {
 
     // cardTypes = ['visa', 'mastercard', ...]
     var newType = update.cardType === 'unknown' ? '' : update.cardType
-    $('#cardtype').text(newType)
+    document.querySelector('#cardtype').text(newType)
     /* Change form-group style when tappay field status change */
     /* ======================================================= */
 
@@ -206,7 +205,7 @@ orderForm.addEventListener('submit', function (event) {
     // Get prime
     TPDirect.card.getPrime(function (result) {
         if (result.status !== 0) {
-            alert('get prime error ' + result.msg)
+            // alert('get prime error ' + result.msg)
             return
         }
         // alert('get prime 成功，prime: ' + result.card.prime)
@@ -249,20 +248,29 @@ orderForm.addEventListener('submit', function (event) {
     // return false
     event.preventDefault()
 })
-// 底下這些有用到jquery
+
 function setNumberFormGroupToError(selector) {
-    $(selector).addClass('has-error')
-    $(selector).removeClass('has-success')
+    element = document.getElementById(`${selector}`);
+    element.classList.add('has-error');
+    element.classList.remove('has-success');
+    // $(selector).addClass('has-error')
+    // $(selector).removeClass('has-success')
 }
 
 function setNumberFormGroupToSuccess(selector) {
-    $(selector).removeClass('has-error')
-    $(selector).addClass('has-success')
+    element = document.getElementById(`${selector}`);
+    element.classList.add('has-error');
+    element.classList.remove('has-success');
+    // $(selector).removeClass('has-error')
+    // $(selector).addClass('has-success')
 }
 
 function setNumberFormGroupToNormal(selector) {
-    $(selector).removeClass('has-error')
-    $(selector).removeClass('has-success')
+    element = document.getElementById(`${selector}`);
+    element.classList.add('has-error');
+    element.classList.remove('has-success');
+    // $(selector).removeClass('has-error')
+    // $(selector).removeClass('has-success')
 }
 
 function forceBlurIos() {
