@@ -154,8 +154,8 @@ TPDirect.card.onUpdate(function (update) {
     /* ============================================== */
 
     // cardTypes = ['visa', 'mastercard', ...]
-    var newType = update.cardType === 'unknown' ? '' : update.cardType
-    document.querySelector('#cardtype').text(newType)
+    // var newType = update.cardType === 'unknown' ? '' : update.cardType
+    // document.querySelector('#cardtype').text(newType)
     /* Change form-group style when tappay field status change */
     /* ======================================================= */
 
@@ -228,7 +228,7 @@ orderForm.addEventListener('submit', function (event) {
                 }
             }
         };
-        console.log(requestBody);
+        // console.log(requestBody);
         const config = {
             method: "POST",
             body: JSON.stringify(requestBody),
@@ -240,7 +240,7 @@ orderForm.addEventListener('submit', function (event) {
             const res = await fetch('api/order', config)
             const response = await res.json()
             if (response.data) {
-                console.log(response.data);
+                // console.log(response.data);
                 window.location.replace(`/thankyou?number=${response.data.number}`)
             }
         })()
@@ -250,24 +250,24 @@ orderForm.addEventListener('submit', function (event) {
 })
 
 function setNumberFormGroupToError(selector) {
-    element = document.getElementById(`${selector}`);
-    element.classList.add('has-error');
-    element.classList.remove('has-success');
+    element = document.querySelector(`${selector}`)
+    element.classList.add('has-error')
+    element.classList.remove('has-success')
     // $(selector).addClass('has-error')
     // $(selector).removeClass('has-success')
 }
 
 function setNumberFormGroupToSuccess(selector) {
-    element = document.getElementById(`${selector}`);
-    element.classList.add('has-error');
-    element.classList.remove('has-success');
+    element = document.querySelector(`${selector}`)
+    element.classList.remove('has-error');
+    element.classList.add('has-success');
     // $(selector).removeClass('has-error')
     // $(selector).addClass('has-success')
 }
 
 function setNumberFormGroupToNormal(selector) {
-    element = document.getElementById(`${selector}`);
-    element.classList.add('has-error');
+    element = document.querySelector(`${selector}`)
+    element.classList.remove('has-error');
     element.classList.remove('has-success');
     // $(selector).removeClass('has-error')
     // $(selector).removeClass('has-success')
