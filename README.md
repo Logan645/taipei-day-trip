@@ -9,9 +9,7 @@
 ### 首頁
 <img width="1492" alt="首頁" src="https://github.com/Logan645/taipei-day-trip/assets/109937255/f0fcfcc6-54ba-40a2-b528-bb8edc5239dd">
 ### 商品頁
-<img width="1496" alt="商品頁" src="https://github.com/Logan645/taipei-day-trip/assets/109937255/46888c12-3d87-48e5-85f9-7101c2c97674">
+<img width="1496" alt="商品頁" src="https://github.com/Logan645/taipei-day-trip/assets/109937255/9c3041fd-fdcf-4df6-9106-fb7db654ffe7">
 ### 訂購頁
 <img width="1496" alt="訂購頁" src="https://github.com/Logan645/taipei-day-trip/assets/109937255/9912c03c-3db5-46d5-9c9a-2fabf5e3bd6f">
-
-
 
