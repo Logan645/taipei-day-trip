@@ -28,3 +28,21 @@ create table cart(
         FOREIGN KEY (user_ID) REFERENCES member(id),
         FOREIGN KEY (attraction_id) REFERENCES attractions(id)
         );
+
+create table order_data(
+	id bigint NOT NULL primary key AUTO_INCREMENT,
+	user_id bigint NOT NULL,
+	attraction_id bigint not null,
+	date DATE NOT NULL,
+	time enum('morning','afternoon') NOT NULL,
+	price bigint not null,
+	order_number bigint not null unique,
+	rec_trade_id varchar(255) DEFAULT NULL,
+	bank_transaction_id varchar(255) DEFAULT NULL,
+        name varchar(255) not null,
+        email varchar(255) not null,
+        phone varchar(255) not null,
+	status tinyint(1) DEFAULT '1',
+	FOREIGN KEY (user_id) REFERENCES member(id),
+	FOREIGN KEY (attraction_id) REFERENCES attractions(id)
+) ;

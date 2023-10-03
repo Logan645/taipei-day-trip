@@ -1,0 +1,11 @@
+main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+#order_id{
+    font-weight: 900;
+}
